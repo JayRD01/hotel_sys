@@ -28,9 +28,10 @@ class ReservationsSys:
             for r in rooms:
                 if r.id_reservation == reservation.id_reservation:
                     rooms.remove(r)
-                    return f'Su reservacion fue removida de la habitacion numero {keys}'
-            
-            return f'La reservacion {reservation} no pudo ser encontrada'
+                    return f"Su reservación fue removida de la habitación número {keys}."
+        # Agregar información más legible en el mensaje de error
+        return f"La reservación con ID {reservation.id_reservation} no pudo ser encontrada."
+
 
 info = Reservation(100,3,"Darlyn",datetime.today(),datetime.today())
 start = ReservationsSys()
